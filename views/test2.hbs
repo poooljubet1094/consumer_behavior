@@ -1,0 +1,21 @@
+<div class="w-full mt-24 text-center">
+    <form method="POST">
+        <div class="divide-y divide-amber-400">
+            {{#each questions}}
+            <div class="ml-72 mr-72 pb-4">
+                <div class="font-semibold text-xl mt-14 tracking-wide">{{ question }}</div>
+                <div class="flex justify-center mt-2">
+                    <span class="text-sm">Disagree</span>
+                    {{#each options}}
+                    <input type="radio" name="{{ name }}" value="{{ value }}" class="w-6 h-6 mx-4" />
+                    {{/each}}
+                    <span class="text-sm">Agree</span>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="mt-10">
+            <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-lg border">SUBMIT</button>
+        </div>
+    </form>
+</div>

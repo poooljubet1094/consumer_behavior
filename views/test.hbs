@@ -1,45 +1,27 @@
-<div class="w-full mt-10 text-center">
-    <form>
-        <div class="font-bold text-lg">I prefer to buy my needs during sales seasons.</div>
-        <div class="flex justify-center mt-2">
-            <span class="text-sm">STRONGLY DISAGREE</span>
-            <input type="radio" name="q1" value="1" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q1" value="2" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q1" value="3" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q1" value="4" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q1" value="5" class="w-6 h-6 mx-4" />
-            <span class="text-sm">STRONGLY AGREE</span>
+<div class="w-full mt-10 ml-72 mr-72">
+    <form method="POST">
+        <div class="flex w-full">
+            <div class="w-20 mr-2 text-lg">Age:</div>
+            <input type="number" name="age" class="border rounded px-2 py-1" />
         </div>
-        <div class="font-bold text-lg mt-2">I can save money when buying products that have odd prices.</div>
-        <div class="flex justify-center mt-2">
-            <span class="text-sm">STRONGLY DISAGREE</span>
-            <input type="radio" name="q2" value="1" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q2" value="2" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q2" value="3" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q2" value="4" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q2" value="5" class="w-6 h-6 mx-4" />
-            <span class="text-sm">STRONGLY AGREE</span>
+        <div class="flex w-full mt-4">
+            <div class="w-20 mr-2 text-lg">Gender:</div>
+            <select name="gender" class="border rounded px-2 py-1">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
         </div>
-        <div class="font-bold text-lg mt-2">When I buy product spontaneously, I am feeling released.</div>
-        <div class="flex justify-center mt-2">
-            <span class="text-sm">STRONGLY DISAGREE</span>
-            <input type="radio" name="q3" value="1" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q3" value="2" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q3" value="3" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q3" value="4" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q3" value="5" class="w-6 h-6 mx-4" />
-            <span class="text-sm">STRONGLY AGREE</span>
+        {{#each questions}}
+        <div class="mt-6 capitalize">{{ question }}</div>
+        <div class="mt-2">
+            {{#each options}}
+            <div class="flex content-center">
+                <input type="radio" name="{{ name }}" value="{{ value }}" class="w-4 h-4 mx-4" />
+                {{ value }}
+            </div>
+            {{/each}}
         </div>
-        <div class="font-bold text-lg mt-2">When my intentions are to just browse on website, make purchase.</div>
-        <div class="flex justify-center mt-2">
-            <span class="text-sm">STRONGLY DISAGREE</span>
-            <input type="radio" name="q4" value="1" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q4" value="2" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q4" value="3" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q4" value="4" class="w-6 h-6 mx-4" />
-            <input type="radio" name="q4" value="5" class="w-6 h-6 mx-4" />
-            <span class="text-sm">STRONGLY AGREE</span>
-        </div>
+        {{/each}}
         <div class="mt-10">
             <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-lg border">SUBMIT</button>
         </div>

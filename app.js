@@ -11,8 +11,10 @@ var aboutRouter = require('./routes/about');
 var dashboardRouter = require('./routes/dashboard');
 var consumerTypesRouter = require('./routes/consumer_types');
 var testRouter = require('./routes/test');
+var test2Router = require('./routes/test2');
 var loginRouter = require('./routes/login');
 var createAccountRouter = require('./routes/create-account');
+var resultRouter = require('./routes/result');
 
 var app = express();
 
@@ -32,8 +34,10 @@ app.use('/about', aboutRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/consumer-types', consumerTypesRouter);
 app.use('/take-test', testRouter);
+app.use('/take-test-2', test2Router);
 app.use('/login', loginRouter);
 app.use('/create-account', createAccountRouter);
+app.use('/result', resultRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

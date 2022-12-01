@@ -1,22 +1,20 @@
-<div class="flex justify-between ml-72 mr-72 mt-10 flex-wrap">
-    <div class="text-center w-1/2">
-        <div class="uppercase text-lg py-4">Discount Seekers:</div>
-        <div class="text-sm p-4">It's not hard to understand why discount seekers aren't valuable to your business. They shop around searching mutliple sites or stores trying to find the best price, and will always base their buying decisions on how much they can save.</div>
+<div class="ml-72 mr-72 mt-10">
+    <div class="flex w-full">
+        <div class="w-1/6">
+            <svg class="h-full w-full" viewBox="0 0 24 24">
+                <path fill="currentColor" d="{{ consumerType.svgData }}" />
+            </svg>
+        </div>
+        <div class="w-5/6 text-center">
+            <div class="uppercase text-lg py-4 font-bold">{{ consumerType.name }}:</div>
+            <div class="text-sm p-4">{{ consumerType.description }}</div>
+        </div>
     </div>
-    <div class="text-center w-1/2">
-        <div class="uppercase text-lg py-4">Loyal Buyer:</div>
-        <div class="text-sm p-4">Loyal customer are the driving force behind not only repeat purchases but also your brand's overall success and longevity.</div>
-    </div>
-    <div class="text-center w-1/2">
-        <div class=" uppercase text-lg py-4">Need Customers:</div>
-        <div class="text-sm p-4">While impulse shoppers don't have a particular product in mind when they visit your store, need-based customers are on the hunt for something very specific.</div>
-    </div>
-    <div class="text-center w-1/2">
-        <div class="uppercase text-lg py-4">Wandering Shopper:</div>
-        <div class="text-sm p-4">If discount seekers are the least loyal type of online customer, wandering shoppers are right behind. With no idea what they want to buy but a desire to.</div>
-    </div>
-    <div class="text-center w-full">
-        <div class="uppercase text-lg py-4">Impulsive Buyer:</div>
-        <div class="text-sm p-4">Impulsive buyers, like wandering consumers, don't go shopping with a specific product in mind. Instead, individuals make purchases based on what appears to be a good idea. Impulse consumers are typically preoccupied with acquiring the latest goods because of this thinking. They're the ones who will substitute a perfectly good product for the one that is more up to date or trendy. This makes inpulse purchasers specially vulnerable to spending in fast-changing areas like fashion, cosmetics, and technology.</div>
+
+    <div class="flex justify-center mt-16 space-x-4">
+        <a href="/consumer-types/discount-seeker" class="bg-gray-500 rounded-full w-6 h-6"></a>
+        <a href="/consumer-types/wandering" class="bg-gray-500 rounded-full w-6 h-6"></a>
+        <a href="/consumer-types/loyal-customer" class="bg-gray-500 rounded-full w-6 h-6"></a>
+        <a href="/consumer-types/impulsive-buyer" class="bg-gray-500 rounded-full w-6 h-6"></a>
     </div>
 </div>
